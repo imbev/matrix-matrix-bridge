@@ -4,7 +4,7 @@ import simplematrixbotlib as botlib
 def setup_handlers(bot, config) -> None:
 
     @bot.listener.on_startup
-    async def join_bridged_rooms():
+    async def join_bridged_rooms(room):
         """Join rooms specified in config if not already joined."""
         joined_rooms = (await bot.async_client.joined_rooms())
         for bridge in config["bridge"]:
