@@ -1,0 +1,1 @@
+from matrixmatrixbridge.handlers import setup_handlers
