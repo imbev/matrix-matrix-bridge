@@ -1,0 +1,30 @@
+homeserver = "https://example.com" # Required
+username = "example_user" # Required
+password = "example_password" # Required or
+# access_token = "syt_..."
+admin_user_id = [] # Default
+
+# For each bridge:
+[[bridge]] # Required
+    name = "example_bridge" # Required
+    # For each input room
+    [[bridge.input]] # Required
+        room_id = "!yRjNdMVvyeIgpYRBit:example.com" # Required
+        required_prefix = "" # Default
+        required_sender_user_id = [] # Default
+    # For each output room
+    [[bridge.output]] # Required
+        room_id = "!OGEhHVWSdvArJzumhm:example.com" # Required
+
+[[bridge]]
+    name = "another_bridge"
+    [[bridge.input]]
+        room_id = "!ovGZXReQuDFezAaAfr:example.com" 
+        required_prefix = "b!" # Only bridge messages that start with "b!", not including the "b!"
+        required_sender_user_id = ["@user:example.com"] # Only bridge messages sent by @user:example.com
+    [[bridge.input]] # Input from multiple rooms
+        room_id = "!jxlRxnrZCsjpjDubDX:example.com"
+    [[bridge.output]]
+        room_id = "!HRNVeGThDQRMYdGzLD:example.com"
+    [[bridge.output]] # Output to multiple rooms
+        room_id = "!JiiOHXrIUCtcOJsZCa:example.com"
