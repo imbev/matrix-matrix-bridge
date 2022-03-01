@@ -1,6 +1,7 @@
 # matrix-matrix-bridge
 A bridge for the Matrix Protocol that connects Matrix rooms to each other. 
-Made with [![](https://img.shields.io/badge/simplematrixbotlib-2.6.1-brightgreen)](https://github.com/i10b/simplematrixbotlib)
+
+Made with [![](https://img.shields.io/badge/simplematrixbotlib-2.6.2-brightgreen)](https://github.com/i10b/simplematrixbotlib)
 
 ## Setup
 - Install python 3.8 or higher
