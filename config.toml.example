@@ -15,6 +15,7 @@ admin_user_id = [] # Default
     # For each output room
     [[bridge.output]] # Required
         room_id = "!OGEhHVWSdvArJzumhm:example.com" # Required
+        format = "(%user_id): %message" # Default
 
 [[bridge]]
     name = "another_bridge"

@@ -37,6 +37,7 @@ def test_bridge() -> None:
 
     assert len(bridge_1["output"]) == 1
     assert bridge_1["output"][0]["room_id"] == "!OGEhHVWSdvArJzumhm:example.com"
+    assert bridge_1["output"][0]["format"] == "(%user_id): %message"
 
     assert len(bridge_2["input"]) == 2
     bridge_2_input_1, bridge_2_input_2 = {}, {}
@@ -65,4 +66,6 @@ def test_bridge() -> None:
             assert False
     assert bridge_2_output_1
     assert bridge_2_output_2
+    with pytest.raises(KeyError):
+        bridge_2_output_1["format"]
 
