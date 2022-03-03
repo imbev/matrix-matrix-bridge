@@ -37,7 +37,7 @@ password = "password"
 A more detailed example can be found at https://github.com/KrazyKirby99999/matrix-matrix-bridge/blob/master/config.toml.example
 - Run program
 ```bash
-python -m poetry run main.py
+python -m poetry python run main.py
 ```
 
 ## Notes
